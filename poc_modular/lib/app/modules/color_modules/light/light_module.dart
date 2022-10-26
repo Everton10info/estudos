@@ -13,7 +13,6 @@ class LightModule extends Module {
   @override
   List<ModularRoute> get routes => [
         ChildRoute('/', child: (context, args) => const LightPage()),
-        ChildRoute('/messagePage',
-            child: (context, args) => const MessagePage()),
+        ChildRoute('/message', child: (context, args) => const MessagePage()),
       ];
 }

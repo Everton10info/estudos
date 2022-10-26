@@ -43,7 +43,7 @@ class _LightPageState extends State<LightPage> {
                 ElevatedButton(
                   onPressed: () {
                     Modular.to.pushNamed(
-                      'messagePage',
+                      'message',
                       arguments: messagem(),
                     );
                   },
