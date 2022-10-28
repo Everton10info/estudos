@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:poc_modular/app/modules/color_modules/dark/controllers/dark_controller.dart';
+import 'package:poc_modular/app/modules/colors/dark/controllers/dark_controller.dart';
 
 class DarkPage extends StatefulWidget {
   const DarkPage({super.key});

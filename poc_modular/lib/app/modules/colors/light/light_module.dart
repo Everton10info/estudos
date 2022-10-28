@@ -14,6 +14,9 @@ class LightModule extends Module {
   List<ModularRoute> get routes => [
         ChildRoute('/', child: (context, args) => const LightPage()),
         ChildRoute('/messagePage',
-            child: (context, args) => const MessagePage()),
+            child: (context, args) => MessagePage(
+                  message: args.data['message'],
+                  color: args.data['color'],
+                )),
       ];
 }

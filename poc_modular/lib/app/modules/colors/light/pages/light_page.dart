@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
-import 'package:poc_modular/app/modules/color_modules/light/controllers/light_controller.dart';
+import 'package:poc_modular/app/modules/colors/light/controllers/light_controller.dart';
 
 class LightPage extends StatefulWidget {
   const LightPage({super.key});
@@ -37,14 +37,15 @@ class _LightPageState extends State<LightPage> {
                   },
                   child: const Text('Change Color ?'),
                 ),
-                const SizedBox(
-                  height: 30,
-                ),
+                const SizedBox(height: 30),
                 ElevatedButton(
                   onPressed: () {
                     Modular.to.pushNamed(
-                      'messagePage',
-                      arguments: messagem(),
+                      '/light/messagePage',
+                      arguments: {
+                        'message': 'Mensagem recebida!!',
+                        'color': colorLight
+                      },
                     );
                   },
                   child: const Text('Page next'),
@@ -52,21 +53,6 @@ class _LightPageState extends State<LightPage> {
               ],
             ),
           ),
-        ),
-      ),
-    );
-  }
-
-  Widget messagem() {
-    return Container(
-      color: colorLight,
-      height: 150,
-      width: 150,
-      child: const Center(
-        child: Text(
-          'Mensagem recebida!!',
-          style: TextStyle(fontSize: 20),
-          textAlign: TextAlign.center,
         ),
       ),
     );

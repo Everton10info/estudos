@@ -27,12 +27,12 @@ class _HomePageState extends State<HomePage> {
                   children: [
                     ElevatedButton(
                         onPressed: () {
-                          Modular.to.pushNamed('/dark');
+                          Modular.to.pushNamed('/dark/');
                         },
                         child: const Text('Dark  Page ?')),
                     ElevatedButton(
                         onPressed: () {
-                          Modular.to.pushNamed('/light');
+                          Modular.to.pushNamed('/light/');
                         },
                         child: const Text('Light Page ?'))
                   ]),

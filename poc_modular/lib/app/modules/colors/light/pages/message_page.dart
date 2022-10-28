@@ -2,7 +2,14 @@ import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
 
 class MessagePage extends StatefulWidget {
-  const MessagePage({super.key});
+  final String message;
+  final Color color;
+
+  const MessagePage({
+    super.key,
+    required this.message,
+    required this.color,
+  });
 
   @override
   State<MessagePage> createState() => _MessagePageState();
@@ -21,7 +28,10 @@ class _MessagePageState extends State<MessagePage> {
           mainAxisAlignment: MainAxisAlignment.center,
           children: [
             Center(
-              child: Modular.args.data,
+              child: Container(
+                color: widget.color,
+                child: Text(widget.message),
+              ),
             )
           ],
         ),
